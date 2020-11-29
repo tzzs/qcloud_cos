@@ -3,6 +3,7 @@
 import configparser
 import sys
 import os
+import re
 
 from qcloud_cos import CosConfig
 from qcloud_cos import CosS3Client
@@ -32,7 +33,7 @@ if len(argv) == 0:
 
 # 遍历图片进行上传
 for img in argv:
-    file_name = config_qcloud['upload_path'] + img.split('/')[-1]
+    file_name = config_qcloud['upload_path'] + re.split('[/\\\\]',img)[-1]
     response = client.upload_file(
         Bucket=bucket,
         LocalFilePath=img,
