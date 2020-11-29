@@ -1,5 +1,8 @@
 # 腾讯云COS
 
+# Status
+![Pylint status](https://github.com/tzzs/qcloud_cos/workflows/Pylint/badge.svg)
+
 ## upload_for_md
 
 涉及文件
