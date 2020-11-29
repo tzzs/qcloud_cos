@@ -1,4 +1,5 @@
 # -*- coding=utf-8
+"""This script is written for Typora"""
 import configparser
 import sys
 import os
