@@ -14,10 +14,10 @@ config_qcloud = config['qcloud']
 # 设置用户属性, 包括secret_id, secret_key, region
 secret_id = config_qcloud['secret_id']
 secret_key = config_qcloud['secret_key']
-region = 'ap-chongqing'  # 替换为用户的region
-token = None  # 使用临时密钥需要传入Token，默认为空,可不填
+REGION = 'ap-chongqing'  # 替换为用户的region
+TOKEN = None  # 使用临时密钥需要传入Token，默认为空,可不填
 
-config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token)  # 获取配置对象
+config = CosConfig(Region=REGION, SecretId=secret_id, SecretKey=secret_key, Token=TOKEN)  # 获取配置对象
 client = CosS3Client(config)
 
 bucket = config_qcloud['bucket_name']
