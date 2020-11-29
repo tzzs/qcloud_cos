@@ -25,3 +25,14 @@ url =                    # 用于拼接上传后的地址url，可以打开已�
 
 https://url/img.png
 ```
+
+
+### Typora 配置方法
+
+偏好设置 > 图像 > 上传服务设定 > 上传服务:Custom Command > 自定义命令输入以下命令
+
+```shell script
+CALL conda.bat activate WEB && python E:/upload_for_md.py
+```
+
+> 注：由于我的环境下存在多个python，所以先使用conda激活指定的python环境，然后进行脚本的调用。脚本需要写绝对路径

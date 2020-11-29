@@ -1,13 +1,14 @@
 # -*- coding=utf-8
 import configparser
 import sys
+import os
 
 from qcloud_cos import CosConfig
 from qcloud_cos import CosS3Client
 
 # 加载配置信息
 config = configparser.ConfigParser()
-config.read('qcloud_cos.ini')
+config.read(os.path.abspath(os.path.dirname(__file__)) + '\\qcloud_cos.ini')
 config_qcloud = config['qcloud']
 
 # 设置用户属性, 包括secret_id, secret_key, region
